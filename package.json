@@ -1,0 +1,17 @@
+{
+  "name": "computer-organization-astro5",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.2",
+    "astro": "^5.0.0-beta.7",
+    "tailwindcss": "^3.4.14"
+  }
+}
