@@ -5,6 +5,7 @@ const P1 = defineCollection({
 		title: z.string(),
 		date: z.date(),
 		src: z.string(),
+		theme: z.string(),
 	}),
 });
 
@@ -13,6 +14,7 @@ const P2 = defineCollection({
 		title: z.string(),
 		date: z.date(),
 		src: z.string(),
+		theme: z.string(),
 	}),
 });
 
@@ -21,6 +23,7 @@ const P3 = defineCollection({
 		title: z.string(),
 		date: z.date(),
 		src: z.string(),
+		theme: z.string(),
 	}),
 });
 
