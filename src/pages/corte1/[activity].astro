@@ -11,7 +11,6 @@ export async function getStaticPaths() {
 }
 
 const { activity } = Astro.props;
-console.log(activity);
 const { data:{ title, date, src, theme}, body: description} = activity;
 ---
 
