@@ -1,15 +1,106 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
-
-const p1 = await getCollection('P1');
-const p2 = await getCollection('P2');
-const p3 = await getCollection('P3');
+import Layout from "../layouts/Layout.astro";
+import { GithubIcon } from "lucide-react";
 ---
 
-<Layout title="Organizacion de computadores">
-	<main>
-		<h1 class="text-white text-center">Organizacion de computadores</h1>
+<Layout title="Organización de Computadores">
+	<main class="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+		<div class="text-center mb-12">
+			<h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+				Proyecto final de la asignatura
+			</h1>
+			<p class="mt-3 text-xl text-gray-500 sm:mt-4"></p>
+		</div>
+
+		<div class="bg-white shadow overflow-hidden sm:rounded-lg mb-4">
+			<div class="px-4 py-5 sm:px-6">
+				<h2 class="text-2xl font-bold text-gray-900">
+					Detalles del Proyecto
+				</h2>
+				<p class="mt-1 max-w-2xl text-sm text-gray-500">
+					Información sobre el creador y el proyecto
+				</p>
+			</div>
+			<div class="border-t border-gray-200 px-4 py-5 sm:px-6">
+				<dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
+					<div class="sm:col-span-1">
+						<dt class="text-sm font-medium text-gray-500">
+							Creado por
+						</dt>
+						<dd class="mt-1 text-sm text-gray-900">
+							Santiago Alexander Ospina Pabón
+						</dd>
+					</div>
+					<div class="sm:col-span-1">
+						<dt class="text-sm font-medium text-gray-500">
+							Tecnología utilizada
+						</dt>
+						<dd class="mt-1 text-sm text-gray-900">
+							Astro + Tailwind CSS
+						</dd>
+					</div>
+					<div class="sm:col-span-2">
+						<dt class="text-sm font-medium text-gray-500">
+							Descripción
+						</dt>
+						<dd class="mt-1 text-sm text-gray-900">
+							Este proyecto consiste en una página web interactiva
+							que presenta los temas del curso de Organización de
+							Computadores. Permite a los estudiantes navegar
+							fácilmente entre diferentes actividades y acceder a
+							recursos relacionados con cada tema.
+						</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+
+		<div class="bg-white overflow-hidden shadow rounded-lg mb-8">
+			<div class="px-4 py-5 sm:p-6">
+				<h3 class="text-lg leading-6 font-medium text-gray-900">
+					Características principales
+				</h3>
+				<div class="mt-5">
+					<ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+						<li>
+							Navegación clara y sencilla entre los temas del
+							curso
+						</li>
+						<li>
+							Diseño estático optimizado para tiempos de carga
+							rápidos
+						</li>
+						<li>
+							Uso de Astro para explorar y reforzar conceptos de
+							desarrollo estático
+						</li>
+						<li>
+							Optimización SEO básica para mejorar la visibilidad
+							en motores de búsqueda
+						</li>
+						<li>
+							Arquitectura simple y eficiente para facilitar el
+							aprendizaje de Astro
+						</li>
+						<li>
+							Estructura modular y fácil de mantener para futuras
+							expansiones
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="mt-8 text-center">
+			<a
+				href="https://github.com/SneatX/Computer_Organization_Astro5"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-gray-700 bg-gray-50 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 shadow"
+			>
+				<GithubIcon className="w-5 h-5 mr-2" />
+				Ver en GitHub
+			</a>
+		</div>
 	</main>
 </Layout>
-
