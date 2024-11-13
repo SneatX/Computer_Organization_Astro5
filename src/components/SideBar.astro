@@ -1,36 +1,34 @@
 ---
 import { type DataEntryMap } from "astro:content";
 import CutDetails from "./CutDetails.astro";
-
 ---
 
 <aside
-  class="w-0 bg-[#4361EE] text-white shadow-xl transition-all duration-300 ease-in-out overflow-y-auto"
+    class="w-0 bg-[#4361EE] text-white shadow-xl transition-all duration-300 ease-in-out overflow-y-auto"
 >
-  <nav class="p-4">
-    <ul class="space-y-4">
-      <li>
-          <CutDetails collection={"P1" as keyof DataEntryMap} />
-      </li>
-      <li>
-        <CutDetails collection={"P2" as keyof DataEntryMap} />
-      </li>
-      <li>
-        <CutDetails collection={"P3" as keyof DataEntryMap} />
-      </li>
-
-    </ul>
-  </nav>
+    <nav class="p-4">
+        <ul class="space-y-4">
+            <li>
+                <CutDetails collection={"P1" as keyof DataEntryMap} />
+            </li>
+            <li>
+                <CutDetails collection={"P2" as keyof DataEntryMap} />
+            </li>
+            <li>
+                <CutDetails collection={"P3" as keyof DataEntryMap} />
+            </li>
+        </ul>
+    </nav>
 </aside>
 <script>
-  function setupMenuButton() {
-    const menuButton = document.getElementById("menu-button");
-    const aside = document.querySelector("aside");
-    menuButton?.addEventListener("click", () => {
-      aside.classList.toggle("w-0");
-      aside.classList.toggle("w-64");
-    });
-  }
-  setupMenuButton();
-  document.addEventListener('astro:after-swap', setupMenuButton);
+    function setupMenuButton() {
+        const menuButton = document.getElementById("menu-button");
+        const aside = document.querySelector("aside");
+        menuButton?.addEventListener("click", () => {
+            aside.classList.toggle("w-0");
+            aside.classList.toggle("w-64");
+        });
+    }
+    setupMenuButton();
+    document.addEventListener("astro:after-swap", setupMenuButton);
 </script>
