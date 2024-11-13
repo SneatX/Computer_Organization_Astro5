@@ -1,8 +1,9 @@
 ---
 import { getCollection } from "astro:content";
+import type { DataEntryMap } from "astro:content";
 
 interface Props {
-    collection: string;
+    collection: keyof DataEntryMap;
 }
 
 const { collection } = Astro.props as Props;
