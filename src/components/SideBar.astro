@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import CutDetails from "./CutDetails.astro";
 
 const p1 = await getCollection("P1");
 const p2 = await getCollection("P2");
@@ -12,38 +13,7 @@ const p3 = await getCollection("P3");
   <nav class="p-4">
     <ul class="space-y-4">
       <li>
-        <details class="group">
-          <summary
-            class="flex items-center justify-between p-2 font-semibold cursor-pointer hover:bg-indigo-700/50 rounded-lg transition-all duration-200"
-          >
-            <span>Corte 1</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 transform transition-transform duration-200 group-open:rotate-180"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </summary>
-          <ul class="mt-2 space-y-1 pl-4">
-            {
-              p1.map((activity) => (
-                <li class="transition-all duration-200 hover:translate-x-1">
-                  <a
-                    href={`/corte1/${activity.slug}`}
-                    class="block py-1 px-2 text-sm text-indigo-200 hover:text-white hover:bg-indigo-700/30 rounded transition-colors"
-                  >
-                    {activity.data.title}
-                  </a>
-                </li>
-              ))
-            }
-          </ul>
-        </details>
+          <CutDetails collection="P1" />
       </li>
       <li>
         <details class="group">
