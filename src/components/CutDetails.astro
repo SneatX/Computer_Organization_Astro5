@@ -32,7 +32,7 @@ const activities = await getCollection(collection);
             activities.map((activity) => (
                 <li class="transition-all duration-200 hover:translate-x-1">
                     <a
-                        href={`/corte1/${activity.slug}`}
+                        href={`/${collection}/${activity.slug}`}
                         class="block py-1 px-2 text-sm text-indigo-200 hover:text-white hover:bg-indigo-700/30 rounded transition-colors"
                     >
                         {activity.data.title}
